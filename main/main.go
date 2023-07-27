@@ -29,6 +29,8 @@ var path embed.FS
 func main() {
 	fmt.Println(version)
 
+	// logo_new_main.png muncul diluar folder main jika di run diluar main
+	// jika di run di dalam folder main maka logo_new_main.png akan mulcul di dalam folder main
 	err := os.WriteFile("logo_new_main.png", logo, fs.ModePerm)
 	if err != nil {
 		panic(err)
